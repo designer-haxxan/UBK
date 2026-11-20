@@ -58,14 +58,31 @@ TEAM = [
         ],
     },
     {
-        # Profile text still to come — the bio supplied was a copy of Qaswar Hayat's.
         "id": "hamza",
         "photo": "team-hamza.jpg",
         "name": ("Mr. Hamza", "جناب حمزہ"),
-        "role": ("Trainer – Skill Development System", "ٹرینر – اسکل ڈویلپمنٹ سسٹم"),
-        "short": ("UBK College of Advanced Studies Jhang", "UBK کالج آف ایڈوانسڈ اسٹڈیز جھنگ"),
-        "bio": [],
-        "facts": [],
+        "role": ("Graphic Design Instructor", "گرافک ڈیزائن انسٹرکٹر"),
+        "short": ("Graphic designer and video editor since 2020, specialising in packaging design.",
+                  "2020 سے گرافک ڈیزائنر اور ویڈیو ایڈیٹر، پیکیجنگ ڈیزائن میں مہارت۔"),
+        "bio": [
+            ("Mr. Hamza is a graphic designer and video editor who has worked with a variety of brands since 2020. His specialty is packaging design, where he turns ideas into designs that stand out on the shelf and connect with customers.",
+             "جناب حمزہ گرافک ڈیزائنر اور ویڈیو ایڈیٹر ہیں جو 2020 سے مختلف برانڈز کے ساتھ کام کر رہے ہیں۔ ان کی خاص مہارت پیکیجنگ ڈیزائن ہے، جس میں وہ خیالات کو ایسے ڈیزائنز میں ڈھالتے ہیں جو دکان کی شیلف پر نمایاں نظر آئیں اور گاہکوں کو متوجہ کریں۔"),
+            ("He comes from D.I. Khan, Pakistan. His learning has come mainly from hands-on practice and real client work, which has shaped his skills and his creative approach.",
+             "ان کا تعلق ڈی آئی خان، پاکستان سے ہے۔ انہوں نے زیادہ تر عملی مشق اور حقیقی کلائنٹس کے کام سے سیکھا ہے، جس نے ان کی مہارت اور تخلیقی انداز کو نکھارا ہے۔"),
+            ("Alongside his design work, he teaches as a Graphic Design Instructor at UBK College of Advanced Studies. He also runs his own online platform, Nextstep Skills, on social media, where he teaches graphic design and video editing to students with practical, step-by-step guidance.",
+             "ڈیزائن کے کام کے ساتھ ساتھ وہ UBK کالج آف ایڈوانسڈ اسٹڈیز میں گرافک ڈیزائن انسٹرکٹر کے طور پر پڑھاتے ہیں۔ وہ سوشل میڈیا پر اپنا آن لائن پلیٹ فارم “نیکسٹ اسٹیپ اسکلز” بھی چلاتے ہیں، جہاں وہ طلبہ کو عملی اور مرحلہ وار رہنمائی کے ساتھ آن لائن گرافک ڈیزائن اور ویڈیو ایڈیٹنگ سکھاتے ہیں۔"),
+            ("Whether you need a brand design, packaging, or video editing, or want to learn these skills yourself, he is happy to work with you.",
+             "اگر آپ کو برانڈ ڈیزائن، پیکیجنگ یا ویڈیو ایڈیٹنگ کی ضرورت ہو، یا آپ خود یہ مہارتیں سیکھنا چاہتے ہوں، تو وہ آپ کے ساتھ کام کرنے کے لیے تیار ہیں۔"),
+        ],
+        "facts": [
+            (("Designation", "عہدہ"), ("Graphic Design Instructor", "گرافک ڈیزائن انسٹرکٹر")),
+            (("Institution", "ادارہ"), ("UBK College of Advanced Studies", "UBK کالج آف ایڈوانسڈ اسٹڈیز")),
+            (("Experience", "تجربہ"), ("Graphic design and video editing since 2020", "2020 سے گرافک ڈیزائن اور ویڈیو ایڈیٹنگ")),
+            (("Specialty", "خاص مہارت"), ("Packaging Design", "پیکیجنگ ڈیزائن")),
+            (("Online Platform", "آن لائن پلیٹ فارم"), ("Nextstep Skills — graphic design and video editing classes", "نیکسٹ اسٹیپ اسکلز — گرافک ڈیزائن اور ویڈیو ایڈیٹنگ کی کلاسز")),
+            (("From", "تعلق"), ("D.I. Khan, Pakistan", "ڈی آئی خان، پاکستان")),
+            (("Expertise", "مہارت"), ("Brand Design, Packaging Design, Video Editing", "برانڈ ڈیزائن، پیکیجنگ ڈیزائن، ویڈیو ایڈیٹنگ")),
+        ],
     },
 ]
 
