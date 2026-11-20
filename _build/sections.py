@@ -360,3 +360,27 @@ def cta_trio(cls=""):
     </div>
   </section>
 """
+
+
+# ---------------------------------------------------------------- photo gallery (real campus photos)
+
+def gallery_section(title, lead, items, gid="", cls="", cols=4, link=None):
+    """items: (image, caption, size) where size is "", "wide", "tall" or "big"."""
+    cells = "".join(f"""
+        <a class="g-item {size}" href="{img(im)}" data-caption="{cap}" data-aos="zoom-in" data-aos-delay="{(i % 4) * 80}">
+          <img src="{img(im)}" alt="{cap}" loading="lazy">
+          <span class="g-cap"><i class="bi bi-arrows-angle-expand"></i>{cap}</span>
+        </a>""" for i, (im, cap, size) in enumerate(items))
+    more = f'<a href="{link[1]}" class="link-arrow">{link[0]} <i class="bi bi-arrow-right"></i></a>' if link else ""
+    gid_attr = f' id="{gid}"' if gid else ""
+    return f"""
+  <section class="section {cls}"{gid_attr}>
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title" data-aos="fade-up">{title}</h2>
+        <div class="d-flex flex-column gap-2 align-items-lg-end" data-aos="fade-up" data-aos-delay="100"><p class="section-lead">{lead}</p>{more}</div>
+      </div>
+      <div class="gallery-grid cols-{cols}">{cells}</div>
+    </div>
+  </section>
+"""

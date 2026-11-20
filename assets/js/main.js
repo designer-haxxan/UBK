@@ -284,6 +284,41 @@
       }
     }
 
+    /* ---------- Gallery lightbox ---------- */
+    var $items = $(".g-item");
+    if ($items.length) {
+      var $lb = $('<div class="lightbox" role="dialog" aria-modal="true">' +
+        '<button class="lb-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>' +
+        '<button class="lb-prev" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>' +
+        '<figure><img alt=""><figcaption></figcaption></figure>' +
+        '<button class="lb-next" aria-label="Next"><i class="bi bi-arrow-right"></i></button></div>').appendTo("body");
+      var group = [], idx = 0;
+      var show = function (i) {
+        idx = (i + group.length) % group.length;
+        var $a = $(group[idx]);
+        $lb.find("img").attr({ src: $a.attr("href"), alt: $a.data("caption") });
+        $lb.find("figcaption").text($a.data("caption")).append("<small>" + (idx + 1) + " / " + group.length + "</small>");
+      };
+      $items.on("click", function (e) {
+        e.preventDefault();
+        group = $(this).closest(".gallery-grid").find(".g-item").get();
+        show(group.indexOf(this));
+        $lb.addClass("open");
+        $("body").css("overflow", "hidden");
+      });
+      var close = function () { $lb.removeClass("open"); $("body").css("overflow", ""); };
+      $lb.on("click", function (e) { if (e.target === this) close(); });
+      $lb.find(".lb-close").on("click", close);
+      $lb.find(".lb-prev").on("click", function () { show(idx - 1); });
+      $lb.find(".lb-next").on("click", function () { show(idx + 1); });
+      $(document).on("keydown", function (e) {
+        if (!$lb.hasClass("open")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowRight") show(isRTL ? idx - 1 : idx + 1);
+        if (e.key === "ArrowLeft") show(isRTL ? idx + 1 : idx - 1);
+      });
+    }
+
     /* ---------- Desktop: "Courses" opens on hover, click goes to the page ---------- */
     $(".main-nav .dropdown-toggle").on("click", function (e) {
       if (window.innerWidth >= 992) {

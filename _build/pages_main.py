@@ -2,7 +2,7 @@
 
 from core import t, img, page_hero
 from sections import (logos_strip, stats_band, tracks_grid, work_slider, scholars_section, skills_section,
-                      testimonials_section, pricing_section, faq_cards_section, cta_wide, cta_trio)
+                      testimonials_section, pricing_section, faq_cards_section, cta_wide, cta_trio, gallery_section)
 
 
 # ================================================================= HOME
@@ -56,7 +56,7 @@ def home():
             </div>
             <div class="col-b" style="transition:transform .6s cubic-bezier(.22,1,.36,1)">
               <div class="bento-img h-2 pop d-2"><img src="{img('hero-orange.jpg')}" alt="{t('Scholar working on digital marketing', 'ڈیجیٹل مارکیٹنگ پر کام کرتا عالم')}"></div>
-              <div class="bento-img h-3 overlay pop d-3"><img src="{img('hero-campus.jpg')}" alt="{t('Students training on campus', 'کیمپس میں تربیت لیتے طلبہ')}"><span class="label">{t('On-Campus Training', 'آن کیمپس تربیت')}</span></div>
+              <div class="bento-img h-3 overlay pop d-3"><img src="{img('real-lab-main.jpg')}" alt="{t('UBK main computer lab', 'UBK کی مرکزی کمپیوٹر لیب')}"><span class="label">{t('On-Campus Training', 'آن کیمپس تربیت')}</span></div>
             </div>
           </div>
         </div>
@@ -91,6 +91,17 @@ def home():
   {scholars_section()}
   {skills_section()}
   {testimonials_section()}
+  {gallery_section(t('Life at UBK', 'UBK کی جھلکیاں'),
+                   t('Real moments from our campus — labs, classes, entry tests and community events.', 'ہمارے کیمپس کے حقیقی لمحات — لیبز، کلاسز، داخلہ ٹیسٹ اور کمیونٹی تقریبات۔'),
+                   [('real-lab-main.jpg', t('Main computer lab', 'مرکزی کمپیوٹر لیب'), 'big'),
+                    ('real-group-batch.jpg', t('UBK scholars', 'UBK کے طلبہ'), 'wide'),
+                    ('real-classroom.jpg', t('Lecture hall', 'لیکچر ہال'), ''),
+                    ('real-entry-test-mentor.jpg', t('Entry test day', 'داخلہ ٹیسٹ کا دن'), ''),
+                    ('real-plantation.jpg', t('Tree plantation campaign', 'شجرکاری مہم'), ''),
+                    ('real-labour-day.jpg', t('Labour Day talk', 'یومِ مزدور پر خطاب'), ''),
+                    ('real-lab-side.jpg', t('Computer lab', 'کمپیوٹر لیب'), ''),
+                    ('real-entry-test-2.jpg', t('Applicants during the entry test', 'داخلہ ٹیسٹ کے دوران امیدوار'), '')],
+                   link=(t('See more photos', 'مزید تصاویر دیکھیں'), 'about.html#gallery'))}
   {pricing_section()}
   {faq_cards_section("pt-0")}
   {cta_wide("pt-0")}
@@ -121,16 +132,16 @@ def about():
     acc = "".join(f"""<div class="acc-item{' open' if i == 0 else ''}"><button class="acc-head">{h}<i class="bi bi-caret-down-fill caret"></i></button><div class="acc-body">{b}</div></div>"""
                   for i, (h, b) in enumerate(teach))
     campus = [
-        ("campus-hall.jpg", t("Main Training Hall", "مرکزی تربیتی ہال")),
-        ("campus-lab.jpg", t("Computer Lab", "کمپیوٹر لیب")),
-        ("campus-mentoring.jpg", t("Mentoring Room", "مینٹورنگ روم")),
-        ("hero-campus.jpg", t("Group Study Area", "گروپ اسٹڈی ایریا")),
+        ("real-lab-main.jpg", t("Main Computer Lab", "مرکزی کمپیوٹر لیب")),
+        ("real-lab-side.jpg", t("Computer Lab", "کمپیوٹر لیب")),
+        ("real-classroom.jpg", t("Lecture Hall", "لیکچر ہال")),
+        ("real-lab-small.jpg", t("Training Lab", "تربیتی لیب")),
     ]
     slides = "".join(f"""<div><div class="campus-card"><div class="media"><img src="{img(im)}" alt="{n}" loading="lazy"></div><div class="cap"><small>{t('Campus', 'کیمپس')}</small><h4>{n}</h4></div></div></div>""" for im, n in campus)
     body = f"""
   {page_hero(t('About UBK', 'UBK کا تعارف'), t('Rooted in ilm.<br>Built for real income.', 'دینی علم میں جڑیں،<br>حقیقی آمدنی کے لیے تیار۔'),
              t('UBK is a Pakistan-based skills institute that equips madrasa graduates with practical, income-earning digital skills.', 'UBK پاکستان کا ایک تربیتی ادارہ ہے جو مدارس کے فضلا کو عملی اور آمدنی والے ڈیجیٹل ہنر سکھاتا ہے۔'),
-             'about-hero.jpg', t('Scholar teaching students', 'طلبہ کو پڑھاتے ہوئے استاد'))}
+             'real-group-batch.jpg', t('UBK scholars at the campus', 'کیمپس میں UBK کے طلبہ'))}
 
   <section class="section">
     <div class="container">
@@ -171,7 +182,18 @@ def about():
     </div>
   </section>
 
-  {cta_trio("pt-5")}
+  {gallery_section(t('Events &amp;<br>Community', 'تقریبات اور<br>کمیونٹی'),
+                   t('Guest visits, campaigns and talks that bring our scholars and community together.', 'مہمانوں کے دورے، مہمات اور خطابات جو ہمارے طلبہ اور کمیونٹی کو جوڑتے ہیں۔'),
+                   [('real-group-outdoor.jpg', t('UBK scholars with their mentors', 'اساتذہ کے ساتھ UBK کے طلبہ'), 'big'),
+                    ('real-plantation.jpg', t('Tree plantation campaign — Green Pakistan', 'شجرکاری مہم — سرسبز پاکستان'), 'wide'),
+                    ('real-welcome-guest.jpg', t('Welcoming a guest', 'مہمان کا استقبال'), 'tall'),
+                    ('real-meeting.jpg', t('Meeting with partners', 'شراکت داروں کے ساتھ ملاقات'), 'tall'),
+                    ('real-labour-day.jpg', t('Labour Day talk', 'یومِ مزدور پر خطاب'), 'wide'),
+                    ('real-studio-visit.jpg', t('Guests visiting the media studio', 'میڈیا اسٹوڈیو کا دورہ'), ''),
+                    ('real-guests-admission.jpg', t('Guests at the campus', 'کیمپس میں مہمان'), ''),
+                    ('real-studio-visit-2.jpg', t('Studio tour', 'اسٹوڈیو کا معائنہ'), 'wide')],
+                   gid="gallery")}
+  {cta_trio("pt-0")}
 """
     return meta, body
 

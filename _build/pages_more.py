@@ -1,7 +1,7 @@
 """Funding, Admissions, Apply, Application received, Student work, FAQ, Contact."""
 
 from core import t, img, page_hero, COURSES
-from sections import pricing_section, skills_section, faq_cards_section, cta_wide, cta_trio
+from sections import pricing_section, skills_section, faq_cards_section, cta_wide, cta_trio, gallery_section
 
 
 # ================================================================= FUNDING
@@ -117,7 +117,7 @@ def admissions():
     body = f"""
   {page_hero(t('Admissions', 'داخلہ'), t('How to apply', 'اپلائی کرنے کا طریقہ'),
              t('The whole process takes about two weeks from application to offer.', 'درخواست سے آفر تک پورا عمل تقریباً دو ہفتے میں مکمل ہوتا ہے۔'),
-             'admissions-hero.jpg', t('Mentor reviewing an application with a student', 'طالب علم کے ساتھ درخواست کا جائزہ لیتے ہوئے مینٹر'),
+             'real-entry-test-mentor.jpg', t('Mentor checking an applicant’s entry test', 'مینٹر امیدوار کا داخلہ ٹیسٹ دیکھتے ہوئے'),
              button=(t('Start your application', 'درخواست شروع کریں'), 'apply.html'))}
 
   <section class="section">
@@ -131,6 +131,12 @@ def admissions():
     </div>
   </section>
 
+  {gallery_section(t('Entry test day', 'داخلہ ٹیسٹ کا دن'),
+                   t('A look at the skills exercise — relaxed, outdoors and supervised by our mentors.', 'مہارتی مشق کی ایک جھلک — پُرسکون ماحول میں، کھلی فضا میں اور مینٹرز کی نگرانی میں۔'),
+                   [('real-entry-test-1.jpg', t('Applicant completing the exercise', 'مشق مکمل کرتا امیدوار'), ''),
+                    ('real-entry-test-2.jpg', t('Reviewing the questions', 'سوالات کا جائزہ'), ''),
+                    ('real-group-outdoor.jpg', t('Accepted scholars with mentors', 'منتخب طلبہ اساتذہ کے ساتھ'), '')],
+                   cls="pt-0", cols=3)}
   {skills_section("bg-soft")}
 
   <section class="section">
@@ -483,7 +489,7 @@ def contact():
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6" data-aos="fade-right"><table class="info-table">{rows}</table></div>
-        <div class="col-lg-6" data-aos="fade-left"><div class="contact-media"><img src="{img('contact-campus.jpg')}" alt="{t('UBK campus building', 'UBK کیمپس کی عمارت')}" loading="lazy"></div></div>
+        <div class="col-lg-6" data-aos="fade-left"><div class="contact-media"><img src="{img('real-lab-main.jpg')}" alt="{t('UBK main computer lab', 'UBK کی مرکزی کمپیوٹر لیب')}" loading="lazy"></div></div>
       </div>
     </div>
   </section>
