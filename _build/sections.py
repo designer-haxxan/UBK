@@ -48,16 +48,16 @@ def tracks_grid(title=None, lead=None, view_all=False):
     lead = lead or t("Four practical tracks, taught by working professionals and built around real client work.",
                      "چار عملی شعبے، جن کی تربیت تجربہ کار ماہرین حقیقی کلائنٹ ورک کے ذریعے دیتے ہیں۔")
     cards = [
-        ("ecommerce.html", "track-ecommerce.jpg", t("eCommerce", "ای کامرس"),
+        ("ecommerce.html", "real-lab-main.jpg", t("eCommerce", "ای کامرس"),
          t("Source, list and sell products on local and international marketplaces.",
            "مقامی اور عالمی مارکیٹس میں مصنوعات تلاش کرنا، لسٹ کرنا اور فروخت کرنا سیکھیں۔")),
-        ("digital-marketing.html", "track-marketing.jpg", t("Digital Marketing", "ڈیجیٹل مارکیٹنگ"),
+        ("digital-marketing.html", "real-classroom.jpg", t("Digital Marketing", "ڈیجیٹل مارکیٹنگ"),
          t("Run ads, manage social pages and bring paying customers to a business.",
            "اشتہارات چلانا، سوشل میڈیا سنبھالنا اور کاروبار کے لیے گاہک لانا سیکھیں۔")),
-        ("graphic-design.html", "track-design.jpg", t("Graphic Design", "گرافک ڈیزائن"),
+        ("graphic-design.html", "real-lab-small.jpg", t("Graphic Design", "گرافک ڈیزائن"),
          t("Design logos, social posts and brand material clients actually pay for.",
            "کلائنٹس کے لیے لوگو، سوشل میڈیا پوسٹس اور برانڈنگ مواد تیار کرنا سیکھیں۔")),
-        ("video-editing.html", "track-video.jpg", t("Video Editing", "ویڈیو ایڈیٹنگ"),
+        ("video-editing.html", "real-studio-visit-2.jpg", t("Video Editing", "ویڈیو ایڈیٹنگ"),
          t("Cut, caption and colour video for creators, brands and campaigns.",
            "کریئیٹرز، برانڈز اور اشتہارات کے لیے ویڈیو ایڈٹ کرنا، کیپشن لگانا اور رنگ بہتر بنانا سیکھیں۔")),
     ]
@@ -86,11 +86,11 @@ def tracks_grid(title=None, lead=None, view_all=False):
 # ---------------------------------------------------------------- student work slider
 
 WORK = [
-    ("work-store.jpg", "ecommerce", t, "Online Store Setup & Launch", "آن لائن اسٹور سیٹ اپ اور لانچ"),
-    ("work-brand.jpg", "design", t, "Brand Identity & Design Kit", "برانڈ شناخت اور ڈیزائن کٹ"),
-    ("work-social.jpg", "marketing", t, "Social Media Campaign", "سوشل میڈیا مہم"),
-    ("work-store.jpg", "ecommerce", t, "Product Listing Launch", "پروڈکٹ لسٹنگ لانچ"),
-    ("work-brand.jpg", "design", t, "Café Branding Package", "کیفے برانڈنگ پیکج"),
+    ("real-entry-test-1.jpg", "ecommerce", t, "Online Store Setup & Launch", "آن لائن اسٹور سیٹ اپ اور لانچ"),
+    ("real-lab-small.jpg", "design", t, "Brand Identity & Design Kit", "برانڈ شناخت اور ڈیزائن کٹ"),
+    ("real-classroom.jpg", "marketing", t, "Social Media Campaign", "سوشل میڈیا مہم"),
+    ("real-entry-test-1.jpg", "ecommerce", t, "Product Listing Launch", "پروڈکٹ لسٹنگ لانچ"),
+    ("real-lab-small.jpg", "design", t, "Café Branding Package", "کیفے برانڈنگ پیکج"),
 ]
 
 
@@ -143,7 +143,7 @@ def scholars_section():
     <div class="container">
       <div class="row g-5 align-items-stretch">
         <div class="col-lg-6" data-aos="fade-right">
-          <div class="scholars-media"><img src="{img('scholars.jpg')}" alt="{t('Scholar mentoring a student', 'استاد طالب علم کی رہنمائی کرتے ہوئے')}" loading="lazy"></div>
+          <div class="scholars-media"><img src="{img('real-group-outdoor.jpg')}" alt="{t('UBK scholars with their mentors', 'اساتذہ کے ساتھ UBK کے طلبہ')}" loading="lazy"></div>
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-left">
           <h2 class="section-title mb-4">{t('Built for Scholars,<br>Driven by Results', 'فضلا مدارس کے لیے،<br>عملی کامیابی کے ساتھ')}</h2>
@@ -210,7 +210,7 @@ def testimonials_section():
           <div><div class="quote-card">
             <blockquote>{q}</blockquote>
             <div class="person">
-              <img src="{img('avatar-bilal.jpg')}" alt="{n}" loading="lazy">
+              <span class="initials" aria-hidden="true">{n[0]}</span>
               <div><div class="qmark">“</div><div class="name">{n}</div><div class="role">{r}</div></div>
               <div class="tags">{''.join(f'<span>{x}</span>' for x in tags)}</div>
             </div>
@@ -332,7 +332,7 @@ def cta_wide(cls=""):
   <section class="section-sm {cls}">
     <div class="container">
       <div class="cta-wide" data-aos="fade-up">
-        <div class="media"><img src="{img('cta-student.jpg')}" alt="{t('UBK student', 'UBK کا طالب علم')}" loading="lazy"></div>
+        <div class="media"><img src="{img('real-entry-test-2.jpg')}" alt="{t('Applicant during the entry test', 'داخلہ ٹیسٹ کے دوران امیدوار')}" loading="lazy"></div>
         <div class="cta-box">
           <h2>{t('Start Earning From Your Skills Today', 'آج ہی اپنی مہارتوں سے کمانا شروع کریں')}</h2>
           <p>{t('Applications for the next batch are open. Apply in five minutes and our team will contact you.', 'اگلے بیچ کے لیے داخلے جاری ہیں۔ پانچ منٹ میں اپلائی کریں، ہماری ٹیم آپ سے رابطہ کرے گی۔')}</p>
@@ -349,13 +349,13 @@ def cta_trio(cls=""):
   <section class="section-sm {cls}">
     <div class="container">
       <div class="cta-trio">
-        <div class="media" data-aos="fade-up"><img src="{img('cta-left.jpg')}" alt="{t('UBK student in class', 'کلاس میں UBK کا طالب علم')}" loading="lazy"></div>
+        <div class="media" data-aos="fade-up"><img src="{img('real-entry-test-1.jpg')}" alt="{t('Applicant writing the entry test', 'داخلہ ٹیسٹ لکھتا امیدوار')}" loading="lazy"></div>
         <div class="cta-box" data-aos="fade-up" data-aos-delay="100">
           <h2>{t('Start Earning From Your Skills Today', 'آج ہی اپنی مہارتوں سے کمانا شروع کریں')}</h2>
           <p>{t('Applications for the next batch are open. Apply in five minutes.', 'اگلے بیچ کے لیے داخلے جاری ہیں۔ پانچ منٹ میں اپلائی کریں۔')}</p>
           <div><a href="apply.html" class="btn-ubk btn-white btn-sm-ubk">{t('Apply Now', 'ابھی اپلائی کریں')}</a></div>
         </div>
-        <div class="media" data-aos="fade-up" data-aos-delay="200"><img src="{img('cta-right.jpg')}" alt="{t('UBK student working', 'کام کرتا ہوا UBK کا طالب علم')}" loading="lazy"></div>
+        <div class="media" data-aos="fade-up" data-aos-delay="200"><img src="{img('real-lab-side.jpg')}" alt="{t('UBK computer lab', 'UBK کمپیوٹر لیب')}" loading="lazy"></div>
       </div>
     </div>
   </section>

@@ -50,7 +50,7 @@ def privacy():
               f"اس پالیسی کے بارے میں کسی بھی سوال کے لیے {email} پر رابطہ کریں یا لاہور میں ہمارے کیمپس تشریف لائیں۔")]),
     ]
     body = page_hero(t("Legal", "قانونی"), t("Privacy Policy", "پرائیویسی پالیسی"), t("Last updated: 1 August 2026", "آخری تازہ کاری: 1 اگست 2026"),
-                     "privacy-hero.jpg", t("Student at a laptop", "لیپ ٹاپ پر طالب علم")) + _legal(s)
+                     "real-lab-side.jpg", t("UBK computer lab", "UBK کمپیوٹر لیب")) + _legal(s)
     return meta, body
 
 
@@ -93,5 +93,5 @@ def terms():
               "یہ شرائط و ضوابط پاکستان کے قوانین کے تابع ہیں۔ کسی بھی تنازع کی صورت میں لاہور کی عدالتوں کا دائرہ اختیار ہوگا۔")]),
     ]
     body = page_hero(t("Legal", "قانونی"), t("Terms and<br>Conditions", "شرائط و<br>ضوابط"), t("Last updated: 1 August 2026", "آخری تازہ کاری: 1 اگست 2026"),
-                     "hero-design.jpg", t("Student at a workstation", "ورک اسٹیشن پر طالب علم")) + _legal(s)
+                     "real-lab-small.jpg", t("UBK training lab", "UBK تربیتی لیب")) + _legal(s)
     return meta, body

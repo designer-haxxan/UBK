@@ -34,7 +34,7 @@ def home():
             <span class="pill-badge"><span class="ico"><i class="bi bi-mortarboard-fill"></i></span>{t('100% Scholarship', '100% اسکالرشپ')}</span>
             <h6>{t('Apply, qualify, and study without paying any fee.', 'درخواست دیں، اسکالرشپ حاصل کریں اور بالکل مفت سیکھیں۔')}</h6>
             <div class="social-proof">
-              <img class="avatars" src="{img('avatars.png')}" alt="">
+              <span class="proof-icon"><i class="bi bi-people-fill"></i></span>
               <div><strong>1.5k+</strong>{t('satisfied Students', 'مطمئن طلبہ')}</div>
               <span class="divider"></span>
               <div><strong>5 <small style="font-size:.6rem">.0</small> <span class="stars">★★★★★</span></strong>{t('rated happy students', 'طلبہ کی ریٹنگ')}</div>
@@ -45,7 +45,7 @@ def home():
         <div class="col-lg-6">
           <div class="hero-bento">
             <div class="col-a" style="transition:transform .6s cubic-bezier(.22,1,.36,1)">
-              <div class="bento-img h-1 pop d-1"><img src="{img('hero-student.jpg')}" alt="{t('Student learning on a laptop', 'لیپ ٹاپ پر سیکھتا طالب علم')}"></div>
+              <div class="bento-img h-1 pop d-1"><img src="{img('real-entry-test-mentor.jpg')}" alt="{t('Mentor checking an applicant’s entry test', 'مینٹر امیدوار کا داخلہ ٹیسٹ دیکھتے ہوئے')}"></div>
               <div class="pop d-2"><div class="bento-card float-y">
                 <p class="quote">{t('“I completed my first paid order in the second month.”', '“میں نے دوسرے ہی مہینے اپنا پہلا پیڈ آرڈر مکمل کیا۔”')}</p>
                 <a href="apply.html" class="btn-mini">{t('Apply for 100% Free Scholarship', 'مکمل مفت اسکالرشپ کے لیے اپلائی کریں')}</a>
@@ -56,7 +56,7 @@ def home():
               </div>
             </div>
             <div class="col-b" style="transition:transform .6s cubic-bezier(.22,1,.36,1)">
-              <div class="bento-img h-2 pop d-2"><img src="{img('hero-orange.jpg')}" alt="{t('Scholar working on digital marketing', 'ڈیجیٹل مارکیٹنگ پر کام کرتا عالم')}"></div>
+              <div class="bento-img h-2 pop d-2"><img src="{img('real-meeting.jpg')}" alt="{t('Scholars at a UBK meeting', 'UBK کی میٹنگ میں علما')}"></div>
               <div class="bento-img h-3 overlay pop d-3"><img src="{img('real-lab-main.jpg')}" alt="{t('UBK main computer lab', 'UBK کی مرکزی کمپیوٹر لیب')}"><span class="label">{t('On-Campus Training', 'آن کیمپس تربیت')}</span></div>
             </div>
           </div>
@@ -78,7 +78,7 @@ def home():
         <div class="col-lg-6 offset-lg-1" data-aos="zoom-in-up">
           <div class="split-media">
             <span class="badge-orange"><i class="bi bi-check2"></i> {t('Scholar Supervised', 'اساتذہ کی زیرِ نگرانی')}</span>
-            <img src="{img('training.jpg')}" alt="{t('Mentor guiding a student', 'استاد طالب علم کی رہنمائی کرتے ہوئے')}">
+            <img src="{img('real-lab-side.jpg')}" alt="{t('UBK computer lab', 'UBK کمپیوٹر لیب')}">
             <div class="chip-stack"><span>{t('eCommerce', 'ای کامرس')}</span><span>{t('Digital Marketing', 'ڈیجیٹل مارکیٹنگ')}</span><span>{t('Graphic Design', 'گرافک ڈیزائن')}</span></div>
           </div>
         </div>
@@ -161,7 +161,7 @@ def about():
   <section class="section bg-soft">
     <div class="container">
       <div class="row g-5 align-items-start">
-        <div class="col-lg-6" data-aos="fade-right"><div class="teach-media"><img src="{img('how-we-teach.jpg')}" alt="{t('Mentor teaching two students', 'دو طلبہ کو پڑھاتا ہوا استاد')}" loading="lazy"></div></div>
+        <div class="col-lg-6" data-aos="fade-right"><div class="teach-media"><img src="{img('real-studio-visit.jpg')}" alt="{t('Instructor explaining the media studio to guests', 'میڈیا اسٹوڈیو کی وضاحت کرتے ہوئے انسٹرکٹر')}" loading="lazy"></div></div>
         <div class="col-lg-6" data-aos="fade-left">
           <h2 class="section-title mb-4">{t('How We Teach', 'ہمارا طریقۂ تدریس')}</h2>
           <div class="ubk-acc bullets">{acc}</div>
@@ -210,7 +210,7 @@ def courses():
     body = f"""
   {page_hero(t('Skill Tracks', 'کورسز'), t('Four tracks.<br>One goal.<br><span class="text-orange">your first paid work.</span>', 'چار کورسز۔<br>ایک مقصد۔<br><span class="text-orange">آپ کی پہلی کمائی۔</span>'),
              t('Practical skills taught by working professionals — from first lesson to first invoice.', 'تجربہ کار ماہرین سے عملی ہنر سیکھیں — پہلے سبق سے پہلی کمائی تک۔'),
-             'courses-hero.jpg', t('Mentor and student at a laptop', 'لیپ ٹاپ پر استاد اور طالب علم'), button=(t('Apply Now', 'ابھی اپلائی کریں'), 'apply.html'))}
+             'real-classroom.jpg', t('UBK lecture hall', 'UBK لیکچر ہال'), button=(t('Apply Now', 'ابھی اپلائی کریں'), 'apply.html'))}
   {tracks_grid(view_all=True)}
   {logos_strip(cls="pt-0")}
   {skills_section()}
@@ -224,7 +224,7 @@ def courses():
 
 COURSE_DATA = {
     "graphic-design": {
-        "hero": "hero-design.jpg",
+        "hero": "real-lab-small.jpg",
         "title": ("Graphic<br>Design", "گرافک<br>ڈیزائن"),
         "intro": ("Design logos, social posts and brand packages that clients pay for — and build a portfolio to prove it.",
                   "لوگو، سوشل میڈیا پوسٹس اور برانڈ پیکجز ڈیزائن کرنا سیکھیں جن کے لیے کلائنٹس ادائیگی کرتے ہیں — اور اس کا ثبوت پورٹ فولیو کی صورت میں بنائیں۔"),
@@ -246,7 +246,7 @@ COURSE_DATA = {
         ],
     },
     "ecommerce": {
-        "hero": "hero-ecommerce.jpg",
+        "hero": "real-lab-side.jpg",
         "title": ("eCommerce", "ای کامرس"),
         "intro": ("Source, list and sell products on local and international platforms — and make your first sale before the course ends.",
                   "مقامی اور عالمی پلیٹ فارمز پر مصنوعات تلاش کریں، لسٹ کریں اور فروخت کریں — اور کورس ختم ہونے سے پہلے اپنی پہلی سیل کریں۔"),
@@ -268,7 +268,7 @@ COURSE_DATA = {
         ],
     },
     "digital-marketing": {
-        "hero": "hero-marketing.jpg",
+        "hero": "real-labour-day.jpg",
         "title": ("Digital<br>Marketing", "ڈیجیٹل<br>مارکیٹنگ"),
         "intro": ("Run ads, manage social pages and bring paying customers to any business — starting with real campaigns in class.",
                   "اشتہارات چلائیں، سوشل میڈیا پیجز سنبھالیں اور کسی بھی کاروبار کے لیے گاہک لائیں — کلاس ہی میں حقیقی مہمات سے آغاز کریں۔"),
@@ -290,7 +290,7 @@ COURSE_DATA = {
         ],
     },
     "video-editing": {
-        "hero": "hero-video.jpg",
+        "hero": "real-studio-visit-2.jpg",
         "title": ("Video<br>Editing", "ویڈیو<br>ایڈیٹنگ"),
         "intro": ("Cut, caption and colour video for creators, brands and campaigns — and deliver your first paid edit before you graduate.",
                   "کریئیٹرز، برانڈز اور مہمات کے لیے ویڈیو کاٹیں، کیپشن لگائیں اور رنگ درست کریں — اور کورس ختم ہونے سے پہلے اپنا پہلا پیڈ ایڈٹ ڈیلیور کریں۔"),

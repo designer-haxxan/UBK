@@ -43,7 +43,7 @@ def funding():
     body = f"""
   {page_hero(t('Funding Options', 'مالی سہولت'), t('Three ways to start.<br>One of them costs nothing.', 'شروع کرنے کے تین طریقے۔<br>ان میں سے ایک بالکل مفت۔'),
              t('Every UBK student gets the same course, the same mentors and the same certificate — the only difference is how the fee is covered.', 'ہر UBK طالب علم کو ایک جیسا کورس، ایک جیسے مینٹرز اور ایک جیسا سرٹیفکیٹ ملتا ہے — فرق صرف فیس ادا کرنے کے طریقے کا ہے۔'),
-             'funding-hero.jpg', t('Scholar advising a student', 'طالب علم کو مشورہ دیتے ہوئے استاد'))}
+             'real-guests-admission.jpg', t('Guests at the UBK campus with the admissions banner', 'داخلہ بینر کے ساتھ UBK کیمپس میں مہمان'))}
   {pricing_section()}
 
   <section class="section border-top">
@@ -182,7 +182,7 @@ def apply():
     body = f"""
   {page_hero(t('Admissions', 'داخلہ'), t('Apply to UBK', 'UBK میں اپلائی کریں'),
              t('It takes about ten minutes to complete. You will hear back within five working days.', 'اسے مکمل کرنے میں تقریباً دس منٹ لگتے ہیں۔ پانچ کاروباری دنوں میں آپ کو جواب مل جائے گا۔'),
-             'apply-hero.jpg', t('Student filling in an application', 'درخواست پُر کرتا طالب علم'),
+             'real-entry-test-1.jpg', t('Applicant writing the entry test', 'داخلہ ٹیسٹ لکھتا امیدوار'),
              breadcrumb=f'<a href="index.html">{t("Home", "ہوم")}</a> / <a href="admissions.html">{t("Admissions", "داخلہ")}</a> / {t("Apply", "اپلائی")}')}
 
   <section class="section bg-soft">
@@ -196,7 +196,7 @@ def apply():
               <li>{t('You receive an email with the outcome and next steps.', 'آپ کو نتیجے اور اگلے مراحل کے ساتھ ای میل موصول ہوگی۔')}</li>
               <li>{t('If accepted, choose your funding option and confirm your place.', 'منظوری کی صورت میں مالی آپشن منتخب کریں اور اپنی نشست کی تصدیق کریں۔')}</li>
             </ol>
-            <div class="social-proof mt-4"><img class="avatars" src="{img('avatars.png')}" alt=""><div><strong>1.5k+</strong>{t('satisfied Students', 'مطمئن طلبہ')}</div></div>
+            <div class="social-proof mt-4"><span class="proof-icon"><i class="bi bi-people-fill"></i></span><div><strong>1.5k+</strong>{t('satisfied Students', 'مطمئن طلبہ')}</div></div>
             <p class="mt-3" style="font-size:.75rem">{t('Prefer WhatsApp? Message us at', 'واٹس ایپ پسند ہے؟ ہمیں پیغام بھیجیں')} <a href="https://wa.me/923000000000" class="text-blue fw-semibold" dir="ltr">+92 300 000 0000</a></p>
           </aside>
         </div>
@@ -316,18 +316,18 @@ def student_work():
     cats = {"ecommerce": t("eCommerce", "ای کامرس"), "marketing": t("Digital Marketing", "ڈیجیٹل مارکیٹنگ"),
             "design": t("Graphic Design", "گرافک ڈیزائن"), "video": t("Video Editing", "ویڈیو ایڈیٹنگ")}
     items = [
-        ("work-store.jpg", "ecommerce", t("Online Store Setup & Launch", "آن لائن اسٹور سیٹ اپ اور لانچ")),
-        ("work-brand.jpg", "design", t("Restaurant Menu & Branding", "ریسٹورنٹ مینو اور برانڈنگ")),
-        ("work-social.jpg", "marketing", t("Social Media Campaign for Café", "کیفے کے لیے سوشل میڈیا مہم")),
-        ("work-brand.jpg", "video", t("Promotional Video for Gym", "جم کے لیے پروموشنل ویڈیو")),
-        ("work-store.jpg", "ecommerce", t("Product Photography & Listings", "پروڈکٹ فوٹوگرافی اور لسٹنگز")),
-        ("work-social.jpg", "design", t("Event Poster Series", "ایونٹ پوسٹر سیریز")),
-        ("work-social.jpg", "marketing", t("Google Ads Setup for Clinic", "کلینک کے لیے گوگل ایڈز سیٹ اپ")),
-        ("work-brand.jpg", "video", t("YouTube Channel Intro Pack", "یوٹیوب چینل انٹرو پیک")),
-        ("work-store.jpg", "ecommerce", t("Shopify Migration & Rebrand", "شاپیفائی منتقلی اور ری برانڈ")),
-        ("work-store.jpg", "design", t("Logo & Identity Package", "لوگو اور شناختی پیکج")),
-        ("work-social.jpg", "marketing", t("Email Marketing Funnel", "ای میل مارکیٹنگ فنل")),
-        ("work-brand.jpg", "video", t("Wedding Highlight Reel", "شادی کی ہائی لائٹ ریل")),
+        ("real-entry-test-1.jpg", "ecommerce", t("Online Store Setup & Launch", "آن لائن اسٹور سیٹ اپ اور لانچ")),
+        ("real-lab-small.jpg", "design", t("Restaurant Menu & Branding", "ریسٹورنٹ مینو اور برانڈنگ")),
+        ("real-classroom.jpg", "marketing", t("Social Media Campaign for Café", "کیفے کے لیے سوشل میڈیا مہم")),
+        ("real-lab-small.jpg", "video", t("Promotional Video for Gym", "جم کے لیے پروموشنل ویڈیو")),
+        ("real-entry-test-1.jpg", "ecommerce", t("Product Photography & Listings", "پروڈکٹ فوٹوگرافی اور لسٹنگز")),
+        ("real-classroom.jpg", "design", t("Event Poster Series", "ایونٹ پوسٹر سیریز")),
+        ("real-classroom.jpg", "marketing", t("Google Ads Setup for Clinic", "کلینک کے لیے گوگل ایڈز سیٹ اپ")),
+        ("real-lab-small.jpg", "video", t("YouTube Channel Intro Pack", "یوٹیوب چینل انٹرو پیک")),
+        ("real-entry-test-1.jpg", "ecommerce", t("Shopify Migration & Rebrand", "شاپیفائی منتقلی اور ری برانڈ")),
+        ("real-entry-test-1.jpg", "design", t("Logo & Identity Package", "لوگو اور شناختی پیکج")),
+        ("real-classroom.jpg", "marketing", t("Email Marketing Funnel", "ای میل مارکیٹنگ فنل")),
+        ("real-lab-small.jpg", "video", t("Wedding Highlight Reel", "شادی کی ہائی لائٹ ریل")),
     ]
     grid = "".join(f"""
         <div class="col-sm-6 col-lg-4 portfolio-item" data-cat="{c}" data-aos="fade-up" data-aos-delay="{(i % 3) * 100}">
@@ -338,7 +338,7 @@ def student_work():
     body = f"""
   {page_hero(t('Real Client Work', 'حقیقی کلائنٹ ورک'), t('Work our students<br>delivered for paying clients.', 'ہمارے طلبہ کا وہ کام<br>جس کی کلائنٹس نے ادائیگی کی۔'),
              t('Every project below was completed by a UBK student for a real business. Browse by skill track to see what you could be delivering within weeks of enrolling.', 'نیچے دیا گیا ہر پروجیکٹ کسی UBK طالب علم نے ایک حقیقی کاروبار کے لیے مکمل کیا۔ کورس کے لحاظ سے دیکھیں کہ داخلے کے چند ہفتوں بعد آپ کیا کچھ بنا سکتے ہیں۔'),
-             'work-hero.jpg', t('Student presenting design work', 'اپنا ڈیزائن پیش کرتا طالب علم'))}
+             'real-lab-main.jpg', t('UBK main computer lab', 'UBK کی مرکزی کمپیوٹر لیب'))}
 
   <section class="section-sm bg-soft py-4">
     <div class="container"><div class="filter-bar" data-aos="fade-up">{filters}</div></div>
@@ -448,7 +448,7 @@ def faq():
     body = f"""
   {page_hero(t('Questions', 'سوالات'), t('Everything you need to<br>know before you apply.', 'اپلائی کرنے سے پہلے<br>ضروری معلومات۔'),
              t('Browse by category or scroll through — if your question is not here, get in touch and we will answer it personally.', 'زمرے کے لحاظ سے دیکھیں یا نیچے اسکرول کریں — اگر آپ کا سوال یہاں نہیں تو ہم سے رابطہ کریں، ہم خود جواب دیں گے۔'),
-             'campus-mentoring.jpg', t('Student talking with a scholar', 'استاد سے بات کرتا طالب علم'))}
+             'real-meeting.jpg', t('Scholars at a UBK meeting', 'UBK کی میٹنگ میں علما'))}
   {faq_cards_section()}
 
   <section class="section pt-0">
@@ -483,7 +483,7 @@ def contact():
     body = f"""
   {page_hero(t('Contact', 'رابطہ'), t('Come and see<br>the campus.', 'تشریف لائیں اور<br>کیمپس دیکھیں۔'),
              t('We are in Lahore and our doors are open — drop by, call ahead, or send us a message.', 'ہم لاہور میں ہیں اور ہمارے دروازے کھلے ہیں — تشریف لائیں، پہلے کال کریں یا ہمیں پیغام بھیجیں۔'),
-             'contact-hero.jpg', t('Student at the UBK campus entrance', 'UBK کیمپس کے دروازے پر طالب علم'))}
+             'real-welcome-guest.jpg', t('Welcoming a guest at the UBK campus', 'UBK کیمپس میں مہمان کا استقبال'))}
 
   <section class="section">
     <div class="container">

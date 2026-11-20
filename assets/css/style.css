@@ -753,3 +753,9 @@ html[dir="rtl"] .team-photo::after { transform-origin: right; }
 html[dir="rtl"] .team-facts th { padding: 9px 0 9px 12px; }
 .team-facts td { padding: 9px 0; }
 @media (max-width: 767.98px) { .team-modal-photo { max-height: 340px; min-height: 0; } .team-modal .modal-body { padding: 24px 20px; } }
+
+/* Icon / initials in place of stock avatar images */
+.proof-icon { width: 34px; height: 34px; border-radius: 50%; background: var(--ubk-blue); color: #fff; display: grid; place-items: center; font-size: .95rem; flex: none; }
+.quote-card .initials { width: 84px; height: 84px; border-radius: 14px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); color: #fff; display: grid; place-items: center; font-family: var(--font-head); font-size: 2rem; font-weight: 700; flex: none; }
+/* Portrait photos in landscape frames: keep faces in view */
+.bento-img img, .track-card img, .page-hero .media img, .split-media img, .scholars-media img, .cta-wide .media img, .cta-trio .media img { object-position: center 30%; }
