@@ -1,6 +1,7 @@
 """Home, About, Courses and the four course-detail pages."""
 
 from core import t, img, page_hero
+from team import team_section
 from sections import (logos_strip, stats_band, tracks_grid, work_slider, scholars_section, skills_section,
                       testimonials_section, pricing_section, faq_cards_section, cta_wide, cta_trio, gallery_section)
 
@@ -181,6 +182,8 @@ def about():
       <div class="work-slider" data-aos="fade-up">{slides}</div>
     </div>
   </section>
+
+  {team_section()}
 
   {gallery_section(t('Events &amp;<br>Community', 'تقریبات اور<br>کمیونٹی'),
                    t('Guest visits, campaigns and talks that bring our scholars and community together.', 'مہمانوں کے دورے، مہمات اور خطابات جو ہمارے طلبہ اور کمیونٹی کو جوڑتے ہیں۔'),

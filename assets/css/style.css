@@ -724,3 +724,32 @@ main, .site-footer { overflow-x: clip; }
 .lightbox .lb-next { inset-inline-end: 14px; top: 50%; transform: translateY(-50%); }
 html[dir="rtl"] .lightbox .lb-prev .bi, html[dir="rtl"] .lightbox .lb-next .bi { transform: scaleX(-1); }
 @media (max-width: 575.98px) { .lightbox { padding: 60px 12px; } .lightbox .lb-prev, .lightbox .lb-next { top: auto; bottom: 14px; transform: none; } }
+
+/* ---------- Team ---------- */
+.team-card { background: #fff; border: 1px solid var(--ubk-line); border-radius: var(--radius-lg); overflow: hidden; height: 100%; display: flex; flex-direction: column; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
+.team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.team-photo { aspect-ratio: 4 / 4.4; overflow: hidden; background: var(--ubk-soft); position: relative; }
+.team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 4px; background: var(--ubk-orange); transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); }
+html[dir="rtl"] .team-photo::after { transform-origin: right; }
+.team-card:hover .team-photo::after { transform: scaleX(1); }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.1s var(--ease); }
+.team-card:hover .team-photo img { transform: scale(1.05); }
+.team-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.team-body h3 { font-size: 1.3rem; }
+.team-role { color: var(--ubk-orange); font-weight: 600; font-size: .85rem; margin: 6px 0 10px; }
+.team-short { font-size: .85rem; margin-bottom: 18px; }
+.team-body .btn-ubk { margin-top: auto; align-self: flex-start; }
+
+.team-modal .modal-content { border: 0; border-radius: var(--radius-lg); overflow: hidden; }
+.team-modal .btn-close { position: absolute; top: 14px; inset-inline-end: 14px; z-index: 2; background-color: #fff; border-radius: 50%; padding: 10px; opacity: .9; }
+.team-modal-photo { width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: top; }
+.team-modal .modal-body { padding: 32px 30px; }
+.team-modal h3 { font-size: 1.7rem; }
+.team-bio p { font-size: .88rem; margin-bottom: 12px; }
+.team-modal h6 { font-size: .95rem; }
+.team-facts { width: 100%; font-size: .82rem; margin-top: 8px; }
+.team-facts tr { border-top: 1px solid var(--ubk-line); }
+.team-facts th { color: var(--ubk-blue); font-weight: 600; padding: 9px 12px 9px 0; width: 36%; vertical-align: top; }
+html[dir="rtl"] .team-facts th { padding: 9px 0 9px 12px; }
+.team-facts td { padding: 9px 0; }
+@media (max-width: 767.98px) { .team-modal-photo { max-height: 340px; min-height: 0; } .team-modal .modal-body { padding: 24px 20px; } }
